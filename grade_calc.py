@@ -9,3 +9,22 @@ def calc_percentage(points, max_points):
         return 0
     else:
         return (points / max_points) * 100
+
+def get_grade(points):
+    if type(points) != int:
+        raise TypeError("Points must be an integer")
+
+    if points < 0 or points > 100:
+        raise ValueError("Points must be between 0 and 100")
+    elif points >= 92:
+        return "Sehr gut"
+    elif points >= 81:
+        return "Gut"
+    elif points >= 67:
+        return "Befriedigend"
+    elif points >= 50:
+        return "Ausreichend"
+    elif points >= 30:
+        return "Mangelhaft"
+    else:
+        return "Ungenügend"
