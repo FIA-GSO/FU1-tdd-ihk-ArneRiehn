@@ -9,7 +9,6 @@ def test_calc_percentage__points_not_int_max_int():
     max_points = 100
 
     # Act
-    # Assert
     with pytest.raises(TypeError, match="Points and total must be integers"):
         calc_percentage(points, max_points)
 
@@ -19,7 +18,6 @@ def test_calc_percentage__points_int_max_not_int():
     max_points = 100
 
     # Act
-    # Assert
     with pytest.raises(TypeError, match="Points and total must be integers"):
         calc_percentage(points, max_points)
 
@@ -29,7 +27,6 @@ def test_calc_percentage__negative_points_and_max():
     max_points = -1
 
     # Act
-    # Assert
     with pytest.raises(ValueError, match="Points and total must be positive values"):
         calc_percentage(points, max_points)
 
@@ -49,7 +46,6 @@ def test_calc_percentage__negative_points_positive_max():
     max_points = 1
 
     # Act
-    # Assert
     with pytest.raises(ValueError, match="Points and total must be positive values"):
         calc_percentage(points, max_points)
 
@@ -103,7 +99,6 @@ def test_calc_percentage__points_one_greater_than_max():
     max_points = 100
 
     # Act
-    # Assert
     with pytest.raises(ValueError, match="Points cannot be higher than max points"):
         calc_percentage(points, max_points)
 
@@ -116,7 +111,6 @@ def test_get_grade__too_many_points():
     points = 101
 
     # Act
-    # Assert
     with pytest.raises(ValueError, match="Points must be between 0 and 100"):
         get_grade(points)
 
@@ -252,7 +246,6 @@ def test_get_grade__negative_points():
     points = -1
 
     # Act
-    # Assert
     with pytest.raises(ValueError, match="Points must be between 0 and 100"):
         get_grade(points)
 
@@ -261,6 +254,5 @@ def test_get_grade__points_not_int():
     points = "A"
 
     # Act
-    # Assert
     with pytest.raises(TypeError, match="Points must be an integer"):
         get_grade(points)
