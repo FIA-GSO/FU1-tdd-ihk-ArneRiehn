@@ -1,11 +1,11 @@
-def calc_percentage(grade, max_grade):
-    if type(grade) != int or type(max_grade) != int:
-        raise TypeError("Grade and total must be integers")
-    elif grade < 0 or max_grade < 0:
-        raise ValueError("Grade and total must be positive values")
-    elif grade > max_grade:
-        raise ValueError("Grade cannot be higher than max_grade")
-    elif max_grade == 0:
+def calc_percentage(points, max_points):
+    if type(points) != int or type(max_points) != int:
+        raise TypeError("Points and total must be integers")
+    elif points < 0 or max_points < 0:
+        raise ValueError("Points and total must be positive values")
+    elif points > max_points:
+        raise ValueError("Points cannot be higher than max points")
+    elif max_points == 0:
         return 0
     else:
-        return (grade / max_grade) * 100
+        return (points / max_points) * 100
